@@ -640,7 +640,7 @@ class Music(commands.Cog):
         if not self.bot.MUSIC_ENABLED:
             return
 
-        if self.bot.wavelink:
+        if self.bot.wavelink is not None:
             self.wavelink = self.bot.wavelink
         else:
             node = wavelink.Node(
