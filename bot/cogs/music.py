@@ -683,7 +683,9 @@ class Music(commands.Cog):
         """
         On cog load do stuff
         """
+        await self.bot.terminal.connect("Connecting to Wavelink nodes...")
         await self.connect_nodes()
+        await self.bot.terminal.connect("Wavelink nodes connected.")
         await self.databases.servers.execute(
             """
             CREATE TABLE IF NOT EXISTS music_recently_played (
