@@ -650,7 +650,7 @@ class Music(commands.Cog):
                 uri="http://localhost:2333",
                 session=self.bot.sessions.get("Music"),
                 password="BennyBotRoot",
-                secure=True,
+                secure=False,
                 retries=3,
             )
             await wavelink.NodePool.connect(
