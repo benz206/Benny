@@ -651,6 +651,7 @@ class Music(commands.Cog):
                 secure=True,
                 retries=3,
             )
+            await self.bot.terminal.connect("Connecting to Wavelink node...")
             await wavelink.NodePool.connect(
                 client=self.bot,
                 nodes=[node],
@@ -659,6 +660,7 @@ class Music(commands.Cog):
                     client_secret=self.bot.config.get("Spotify").get("Secret"),
                 ),
             )
+            await self.bot.terminal.connect("Wavelink node connected.")
             self.wavelink: wavelink.Node = self.bot.wavelink
 
     async def get_player(self, ctx: commands.Context) -> Optional[Player]:
