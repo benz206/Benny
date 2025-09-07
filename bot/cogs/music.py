@@ -641,8 +641,10 @@ class Music(commands.Cog):
             return
 
         if self.bot.wavelink is not None:
+            await self.bot.terminal.connect("Wavelink node already connected.")
             self.wavelink = self.bot.wavelink
         else:
+            await self.bot.terminal.connect("Connecting to Wavelink node...")
             node = wavelink.Node(
                 id="1",
                 uri="http://localhost:2333",
@@ -651,7 +653,6 @@ class Music(commands.Cog):
                 secure=True,
                 retries=3,
             )
-            await self.bot.terminal.connect("Connecting to Wavelink node...")
             await wavelink.NodePool.connect(
                 client=self.bot,
                 nodes=[node],
