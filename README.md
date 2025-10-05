@@ -1,4 +1,14 @@
 # Benny Bot
+
+## Final Updates
+Hi, if you've been following this project for the 2-3 years its been up, thanks, but I've decided to stop maintaining the Python version.
+
+It's a mess.
+
+So I'm gonna rewrite it in Rust.
+
+I'm a lot better of a programmer now and I should have learned a lot from previous iterations of the bot.
+
 ![image](https://user-images.githubusercontent.com/57199957/185969892-cd62402c-b323-4b63-bc54-aa0dbdccc7ff.png)
 
 This bot will be updated on a weekly basis, features will be added and removed at my discretion until I see it fit to release a first version.
