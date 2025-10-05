@@ -86,7 +86,7 @@ async def when_bot_ready() -> None:
     dispatches = (
         "load_prefixes",
         "initiate_all_tags",
-        "connect_wavelink",
+        "connect_mafic",
         "load_sentinel_managers",
         "load_reminders",
         "load_users",
